@@ -2,6 +2,7 @@ package com.e.welnessapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -36,9 +37,11 @@ public class SplashScreen extends AppCompatActivity {
         getOtpButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                if(phoneNumber.length() != null) {
-//
-//                }
+                if(phoneNumber.equals(null)) {
+                    Toast.makeText(getApplicationContext(), "please specify a valid phone number", Toast.LENGTH_SHORT).show();
+                } else {
+                    Intent intent = new Intent(SplashScreen.this, OtpVerificationScreen.class);
+                }
             }
         });
     }
