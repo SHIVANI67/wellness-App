@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "599074992256",
+    "project_id": "otp-verif-app",
+    "storage_bucket": "otp-verif-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:599074992256:android:a18138685203adfaa23665",
+        "android_client_info": {
+          "package_name": "com.e.welnessapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "599074992256-m0ian802virkmrb4l4o3snv8qk7pavgr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.e.welnessapp",
+            "certificate_hash": "2845c0e1f45246ac47a1cdd996f6f191d4b63ccc"
+          }
+        },
+        {
+          "client_id": "599074992256-0kfuqd9jao0gs5k27uif4gcvnod4h93t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFbXb-vBavMfgsAsaJzK06ko1IZY5adto"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "599074992256-0kfuqd9jao0gs5k27uif4gcvnod4h93t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
