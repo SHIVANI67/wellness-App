@@ -36,9 +36,9 @@ public class SplashScreen extends AppCompatActivity {
         getOtpButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(phoneNumber.length() != null) {
-                    
-                }
+//                if(phoneNumber.length() != null) {
+//
+//                }
             }
         });
     }
