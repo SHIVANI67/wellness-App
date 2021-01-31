@@ -19,6 +19,11 @@
             </intent-filter>
         </activity>
         <activity android:name=".OtpVerificationScreen" />
+        <activity android:name=".RegisterActivity" />
+        <activity android:name=".SignInActivity" />
+        <activity android:name=".ResetPasswordActivity" />
+        <activity android:name=".HomeScreen" />
+        <activity android:name=".DiseaseWebView" />
     </application>
 
 </manifest>
