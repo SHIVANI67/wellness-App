@@ -22,18 +22,19 @@
         android:layout_below="@+id/tv_enter_otp"
         android:layout_centerHorizontal="true"
         android:hint="Enter here"
-        android:textSize="24sp"
-        android:padding="16dp" />
+        android:padding="16dp"
+        android:textSize="24sp" />
 
     <Button
+        android:id="@+id/verify_otp_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/et_enter_otp"
         android:layout_centerHorizontal="true"
         android:layout_margin="36dp"
-        android:text="Verify OTP"
-        android:textColor="#FFFFFF"
         android:background="@color/colorPrimary"
-        android:padding="8dp"/>
+        android:padding="8dp"
+        android:text="Verify OTP"
+        android:textColor="#FFFFFF" />
 
 </RelativeLayout>
