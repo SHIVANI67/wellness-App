@@ -4,45 +4,48 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.Toast;
+import android.os.Handler;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class SplashScreen extends AppCompatActivity {
-
-    EditText etMobileNum;
-    Button getOtpButton;
-    String phoneNumber;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.splash_activity);
 
-        etMobileNum = findViewById(R.id.et_enter_phone);
-        getOtpButton = findViewById(R.id.get_otp_button);
-
-
-        if(etMobileNum.getText() != null) {
-            if(etMobileNum.length() == 10) {
-                phoneNumber = etMobileNum.getText().toString();
-            } else {
-                Toast.makeText(this, "Phone number should be of 10 digits", Toast.LENGTH_SHORT).show();
-            }
-        } else {
-            Toast.makeText(this, "Cannot get otp without a phone number", Toast.LENGTH_SHORT).show();
-        }
-
-        getOtpButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(phoneNumber.equals(null)) {
-                    Toast.makeText(getApplicationContext(), "please specify a valid phone number", Toast.LENGTH_SHORT).show();
-                } else {
-                    Intent intent = new Intent(SplashScreen.this, OtpVerificationScreen.class);
-                }
-            }
-        });
+        FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
+        firebaseAuth.addAuthStateListener(authStateListener);
     }
+
+    FirebaseAuth.AuthStateListener authStateListener = new FirebaseAuth.AuthStateListener() {
+        @Override
+        public void onAuthStateChanged(FirebaseAuth firebaseAuth) {
+            FirebaseUser firebaseUser = firebaseAuth.getCurrentUser();
+
+            if (firebaseUser == null) {
+                Handler handler = new Handler();
+                handler.postDelayed(new Runnable() {
+                    public void run() {
+                        Intent intent = new Intent(SplashScreen.this, RegisterActivity.class);
+                        startActivity(intent);
+                        finish();
+                    }
+                }, 5000);
+            }
+
+            if (firebaseUser != null) {
+                Handler handler = new Handler();
+                handler.postDelayed(new Runnable() {
+                    public void run() {
+                        Intent intent = new Intent(SplashScreen.this, HomeScreen.class);
+                        startActivity(intent);
+                        finish();
+                    }
+                }, 5000);
+            }
+        }
+    };
 }
