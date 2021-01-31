@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Welness App</string>
+    <string name="reset_text">We will send you an e-mail for resetting your password.</string>
+    <string name="error">An error occured.</string>
+    <string name="email_text">Enter your email address</string>
+    <string name="pass_text">Enter your Password</string>
+    <string name="pass_length">Password length must be more than 8 digits</string>
 </resources>
