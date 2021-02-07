@@ -1,20 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/register"
-    android:orientation="vertical">
 
-<!--    <TextView-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:padding="12sp"-->
-<!--        android:text="REGISTER HERE !!"-->
-<!--        android:textAlignment="center"-->
-<!--        android:textAllCaps="true"-->
-<!--        android:textColor="#008000"-->
-<!--        android:textSize="24sp"-->
-<!--        android:textStyle="bold" />-->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/register"
+        android:orientation="vertical">
 
     <TextView
         android:layout_width="match_parent"
@@ -150,4 +144,6 @@
         android:layout_marginTop="4dp"
         android:textSize="16sp"
         android:textStyle="bold" />
-</LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
